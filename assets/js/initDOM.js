@@ -18,7 +18,7 @@ function loadComponent(id, file) {
 
 function main() {
     loadComponent("header", "components/header.html");
-    // loadComponent("footer", "components/footer.html");
+    loadComponent("footer", "components/footer.html");
 }
 
 document.addEventListener("DOMContentLoaded", main) 
