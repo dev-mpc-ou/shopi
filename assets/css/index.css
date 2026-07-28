@@ -1,0 +1,56 @@
+#hero-section {
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 0;
+}
+
+.banner-hero {
+    width: 80vw;
+    display: flex;
+    margin: auto;
+    gap: 10px;
+    height: 230px;
+}
+
+.banner-hero-l {
+    flex: 6;
+    overflow: hidden;
+}
+
+.banner-hero-r {
+    flex: 4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner-hero-r > div {
+    overflow: hidden;
+    flex: 1;
+}
+
+.service-list ul {
+    list-style: none;
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.service-list ul li {
+    flex: 1;
+}
+
+.service-list ul li .image {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+.service-title {
+    text-align: center;
+    margin-top: .5rem;
+    color: black;
+    font-size: 0.8rem;
+}

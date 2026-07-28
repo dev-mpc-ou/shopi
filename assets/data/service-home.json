@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Shopee Super Cheap",
+        "image": "/assets/img/super-cheap-icon.webp"
+    },
+    {
+        "title": "Fulfillment by Shopee",
+        "image": "/assets/img/fulfillment-by-shopee-icon.webp"
+    },
+    {
+        "title": "Shopee Home",
+        "image": "/assets/img/shopee-home-icon.png"
+    },
+    {
+        "title": "Shopee Rewards",
+        "image": "/assets/img/shopee-reward-icon.webp"
+    },
+    {
+        "title": "Vouchers",
+        "image": "/assets/img/super-cheap-icon.webp"
+    },
+    {
+        "title": "Telco & Bills",
+        "image": "/assets/img/tele-bill-icon.webp"
+    }
+]

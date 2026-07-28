@@ -1,17 +1,48 @@
 <div class="main-header">
+    <!-- Hàng đầu tiên -->
+    <div class="nav-header">
+        <div class="nav-header-l">
+            <a href="">Seller Centre</a>
+            <a href="">Download</a>
+            <span>
+                Follow us on
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+            </span>
 
-    <div class="logo-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Logo" class="shopee-logo">
+        </div>
+        <div class="nav-header-r">
+            <a href=""><i class="bi bi-bell"></i>Notification</a>
+            <a href=""><i class="bi bi-question-circle-fill"></i>Help</a>
+            <a href="">Login</a>
+        </div>
     </div>
+    <!-- Hangf giữa -->
+    <div class="nav-body">
+        <div class="logo-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Logo"
+                class="shopee-logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Shopee bao ship 0Đ - Đăng ký ngay!">
+            <button type="submit" class="search-btn">Tìm kiếm</button>
+        </div>
+        <div>
+            <button id="cart-button">
+                <span>0</span>
+                <i class="bi bi-cart-plus"></i>
 
-    <div>
-        <a href="/cart.html">cart</a>
-        <a href="/search.html">search</a>
-        <a href="/pdp.html">Detail Product</a>
-    </div>
-
-    <div class="search-bar">
-        <input type="text" placeholder="Shopee bao ship 0Đ - Đăng ký ngay!">
-        <button type="submit" class="search-btn">Tìm kiếm</button>
+                <!-- Cart Popup -->
+                <div id="cart-popup">
+                    <div class="cart-popup-header">Recently added products</div>
+                    <div class="cart-popup-body">
+                        <p>No product in cart!</p>
+                    </div>
+                    <div class="cart-popup-footer">
+                        
+                    </div>
+                </div>
+            </button>
+        </div>
     </div>
 </div>

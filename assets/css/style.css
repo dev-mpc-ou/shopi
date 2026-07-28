@@ -5,11 +5,46 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: #e1e1e1;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header-l>*,
+.nav-header-r>* {
+    padding: 0 6px;
+}
+
+.nav-header-r>a>i {
+    margin-right: 4px;
+}
+
+.nav-header-l>* {
+    border-right: 1px solid #f5f5f5;
+}
+
+.nav-header-l>*:last-child {
+    border-right: none;
 }
 
 .header-container {
@@ -18,16 +53,17 @@ html, body {
     color: white;
 }
 
-.main-header {
+.nav-body {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    margin-top: 10px;
 }
 
 .shopee-logo {
     height: 50px;
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
 }
 
 .search-bar {
@@ -36,7 +72,7 @@ html, body {
     background-color: white;
     padding: 3px;
     border-radius: 2px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar input {
@@ -62,4 +98,83 @@ html, body {
 
 .search-btn:hover {
     background-color: #f7451f;
+}
+
+#cart-button {
+    font-size: 2rem;
+    color: #f5f5f5;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+#cart-button span {
+    position: absolute;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    color: #f7451f;
+    padding: 0 8px;
+    border-radius: 8px;
+    top: -8px;
+    right: -8px;
+}
+
+#cart-popup {
+    position: absolute;
+    background-color: #f8f8f8;
+    height: 400px;
+    width: 350px;
+    right: -20px;
+    top: 150%;
+    font-size: 1rem;
+    border: 1px solid #989898;
+    padding: 0.8rem;
+    display: none;
+}
+
+#cart-button:hover #cart-popup {
+    display: block;
+}
+
+#cart-popup::before {
+    position: absolute;
+    content: "";
+    background-color: #f8f8f8;
+    width: 20px;
+    height: 20px;
+    top: -11px;
+    right: 20px;
+    border-left: 1px solid #989898;
+    border-top: 1px solid #989898;
+    rotate: 45deg;
+}
+
+#cart-popup::after {
+    content: "";
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+.cart-popup-header {
+    text-align: left;
+    color: #989898;
+}
+
+.cart-popup-body {
+    margin-top: 1rem;
+    color: #0e0e0e;
+}
+
+/* Image */
+.image {
+    height: 100%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
