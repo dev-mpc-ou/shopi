@@ -46,9 +46,9 @@ function loadServiceList() {
         })
 }
 
-function loadCategoriesList() {
+async function loadCategoriesList() {
     const categoriessList = document.querySelector(".categories-box")
-    fetch("assets/data/categories.json").then(r => r.json()).then((v) => {
+    await fetch("assets/data/categories.json").then(r => r.json()).then((v) => {
         v.forEach((item, index) => {
             categoriessList.innerHTML += renderCategoryItem(item)
         })
@@ -56,33 +56,13 @@ function loadCategoriesList() {
         .catch((e) => {
             console.log(e)
         })
-}
 
-function flashsaleProductList() {
-    const flashsaleProductList = document.querySelector(".flashsale-box")
-    fetch("assets/data/flashsale-products.json").then(r => r.json()).then((v) => {
-        v.forEach((item, index) => {
-            flashsaleProductList.innerHTML += renderFlashsaleProductItem(item)
-        })
-    })
-        .catch((e) => {
-            console.log(e)
-        })
-}
-
-
-function initEvents() {
+    // ----
     let categoriessListPos = 0;
-    let flashsaleProductListPos = 0;
 
-    const flashsaleProductLeftBtn = document.querySelector("#flashsale-left-button")
-    const flashsaleProductRightBtn = document.querySelector("#flashsale-right-button")
-    const flashsaleProductList = document.querySelector(".flashsale-box")
-    const flashsaleProductListtWapper = document.querySelector(".flashsale-box-wapper")
 
     const categoriesLeftBtn = document.querySelector("#categories-left-button")
     const categoriesRightBtn = document.querySelector("#categories-right-button")
-    const categoriessList = document.querySelector(".categories-box")
     const categoriessListWapper = document.querySelector(".categories-box-wapper")
 
 
@@ -100,6 +80,25 @@ function initEvents() {
         }
         categoriessList.style.left = `${categoriessListPos}px`
     })
+
+}
+
+async function flashsaleProductList() {
+    const flashsaleProductList = document.querySelector(".flashsale-box")
+    await fetch("assets/data/flashsale-products.json").then(r => r.json()).then((v) => {
+        v.forEach((item, index) => {
+            flashsaleProductList.innerHTML += renderFlashsaleProductItem(item)
+        })
+    })
+        .catch((e) => {
+            console.log(e)
+        })
+    // -----------------
+    let flashsaleProductListPos = 0;
+
+    const flashsaleProductLeftBtn = document.querySelector("#flashsale-left-button")
+    const flashsaleProductRightBtn = document.querySelector("#flashsale-right-button")
+    const flashsaleProductListtWapper = document.querySelector(".flashsale-box-wapper")
 
     flashsaleProductRightBtn.addEventListener("click", () => {
 
@@ -150,7 +149,6 @@ function main() {
         loadServiceList()
         loadCategoriesList()
         flashsaleProductList()
-        initEvents()
         runCooldownFlashsale()
     } catch (e) {
 
