@@ -197,3 +197,11 @@
     color: #fff;
     text-transform: uppercase;
 }
+
+/*------------------------SHOPEEMALL------------------------*/
+#shopeemall-list-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: aqua;
+}
