@@ -36,12 +36,21 @@ function renderFlashsaleProductItem(flashsaleProductItem) {
 
 function renderShopeeMallItem(shopeeMallItem) {
     return `
-    <li class="flashsale-product">
-        <img src="${shopeeMallItem.image}" alt="" srcset="">
-        <div class="shopeemall-text">${shopeeMallItem.promotion}</div>
+    <li class="shopeemall-item">
+        <div class="shopeemall-item-content">
+            <a class="shopeemall-shop" href="#" target="_self">
+                <div class="shopeemall-item-img-wrapper">
+                    <img src="${shopeeMallItem.image}"
+                        class="shopeemall-image">
+                </div>
+            </a>
+            <div class="shopeemall-text">${shopeeMallItem.promotion}</div>
+        </div>
     </li>
     `
 }
+
+
 
 function loadServiceList() {
     const serviceList = document.querySelector("#service-list")
@@ -92,16 +101,54 @@ async function loadCategoriesList() {
 
 }
 
-function loadShopeeMallList() {
+async function loadShopeeMallList() {
     const shopeeMallList = document.querySelector(".shopeemall-items");
-    fetch("assets/data/shopi-maill.json").then(r => r.json()).then((v) => {
+    await fetch("assets/data/shopi-maill.json").then(r => r.json()).then((v) => {
         v.forEach((item, index) => {
             shopeeMallList.innerHTML += renderShopeeMallItem(item)
         })
     })
         .catch((e) => {
-            alert("Lỗi tải dịch vụ")
+            // alert("Lỗi tải dịch vụ")
+            console.log(e)
+        }).finally(() => {
+            shopeeMallList.innerHTML +=
+                `<li class="shopeemall-item">
+                    <button class="shopeemall-header-next-btn">
+                        <a class="shopeemall-header-next-btn-wrapper">
+                            <div class="shopeemall-header-next-btn-text">Xem tất cả</div>
+                            <div class="shopeemall-header-next-btn-icon">
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </a>
+                    </button>
+                </li>`
         })
+
+    // ---
+    let shopeeMallListPos = 0;
+
+    const shopeeMallLeftBtn = document.querySelector
+        ("#shopeemall-left-button")
+    const shopeeMallRightBtn = document.querySelector
+        ("#shopeemall-right-button")
+    const shopeemallBox = document.querySelector
+        (".shopeemall-box")
+
+    shopeeMallRightBtn.addEventListener("click", () => {
+        if (shopeeMallListPos - shopeemallBox.clientWidth > -shopeeMallList.scrollWidth) {
+            shopeeMallListPos -= shopeemallBox.clientWidth
+        }
+        console.log(shopeeMallListPos)
+        shopeeMallList.style.left = `${shopeeMallListPos}px`
+    })
+
+    shopeeMallLeftBtn.addEventListener("click", () => {
+        if (shopeeMallListPos < 0) {
+            shopeeMallListPos += shopeemallBox.clientWidth
+        }
+        shopeeMallList.style.left = `${shopeeMallListPos}px`
+    })
 }
 
 async function flashsaleProductList() {
@@ -164,34 +211,6 @@ function runCooldownFlashsale() {
     }, 1000);
 }
 
-function initEvents() {
-    let shopeeMallListPos = 0;
-
-    const shopeeMallLeftBtn = document.querySelector
-        ("#shopeemall-left-button")
-    const shopeeMallRightBtn = document.querySelector
-        ("#shopeemall-right-button")
-    const shopeeMallList = document.querySelector
-        (".shopeemall-items")
-    const shopeemallBox = document.querySelector
-        (".shopeemall-box")
-
-    shopeeMallRightBtn.addEventListener("click", () => {
-        if (shopeeMallListPos - shopeemallBox.clientWidth > -shopeeMallList.scrollWidth) {
-            shopeeMallListPos -= shopeemallBox.clientWidth
-        }
-        console.log(shopeeMallListPos)
-        shopeeMallList.style.left = `translateX(${shopeeMallListPos}px)`
-    })
-
-    shopeeMallLeftBtn.addEventListener("click", () => {
-        if (shopeeMallListPos > 0) {
-            shopeeMallListPos += shopeemallBox.clientWidth
-        }
-        shopeeMallList.style.left = `translateX(${shopeeMallListPos}px)`
-    })
-}
-
 function main() {
 
     try {
@@ -200,7 +219,6 @@ function main() {
         loadShopeeMallList()
         flashsaleProductList()
         runCooldownFlashsale()
-        initEvents()
     } catch (e) {
 
     }
