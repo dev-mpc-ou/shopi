@@ -12,6 +12,10 @@
 
         </div>
         <div class="nav-header-r">
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
             <a href=""><i class="bi bi-bell"></i>Notification</a>
             <a href=""><i class="bi bi-question-circle-fill"></i>Help</a>
             <a href="">Login</a>
@@ -19,14 +23,17 @@
     </div>
     <!-- Hangf giữa -->
     <div class="nav-body">
-        <div class="logo-box">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Logo"
-                class="shopee-logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Shopee bao ship 0Đ - Đăng ký ngay!">
+        <a href="/">
+            <div class="logo-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Logo"
+                    class="shopee-logo">
+            </div>
+        </a>
+        <form action="/search.html" class="search-bar">
+            <input type="search" placeholder="Shopee bao ship 0Đ - Đăng ký ngay!" name="search" id="search-input"
+                required pattern=".*\S.*">
             <button type="submit" class="search-btn">Tìm kiếm</button>
-        </div>
+        </form>
         <div>
             <button id="cart-button">
                 <span>0</span>
@@ -39,7 +46,7 @@
                         <p>No product in cart!</p>
                     </div>
                     <div class="cart-popup-footer">
-                        
+
                     </div>
                 </div>
             </button>

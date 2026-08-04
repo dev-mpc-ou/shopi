@@ -1,0 +1,71 @@
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#search-filter {
+    width: 250px;
+    padding: 20px 10px;
+}
+
+.filter-header {
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.filter-box {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid #999;
+}
+
+.filter-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.filter-box > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-box > ul > li {
+    margin-bottom: 16px;
+}
+
+.filter-box > ul > li > input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.price-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.price-confirm {
+    width: 100%;
+}
+
+.rating-list {
+    color: rgb(255, 183, 0);
+}
+
+/*  */
+
+#search-results {
+    min-height: 100vh;
+    flex: 1;
+    padding: 20px 10px;
+}
+
+#search-query {
+    font-weight: bold;
+    color: var(--btn-primary);
+}

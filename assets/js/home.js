@@ -224,15 +224,6 @@ function main() {
     }
 }
 
-function toTop() {
-    window.scrollTo(
-        {
-            top: 0,
-            behavior: 'smooth'
-        }
-    )
-}
-
 document.addEventListener("DOMContentLoaded", main)
 
 

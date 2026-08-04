@@ -1,0 +1,18 @@
+/* Trạng thái sáng */
+:root {
+    --bg-primary: #f1f1f1;
+    --btn-primary: #ee4d2d;
+    --text-primary: #ffffff;
+}
+
+
+/* .dark {
+    --bg-primary: #333333;
+} */
+
+/* Trạng thái tối */
+html:has(#dark-mode-toggle:checked) {
+    --bg-primary: #333333;
+    --btn-primary: #ee4d2d;
+    --text-primary: #ffffff;
+}
