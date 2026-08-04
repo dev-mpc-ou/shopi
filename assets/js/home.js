@@ -34,6 +34,15 @@ function renderFlashsaleProductItem(flashsaleProductItem) {
             </li>`
 }
 
+function renderShopeeMallItem(shopeeMallItem) {
+    return `
+    <li class="flashsale-product">
+        <img src="${shopeeMallItem.image}" alt="" srcset="">
+        <div class="shopeemall-text">${shopeeMallItem.promotion}</div>
+    </li>
+    `
+}
+
 function loadServiceList() {
     const serviceList = document.querySelector("#service-list")
     fetch("assets/data/service-home.json").then(r => r.json()).then((v) => {
@@ -81,6 +90,18 @@ async function loadCategoriesList() {
         categoriessList.style.left = `${categoriessListPos}px`
     })
 
+}
+
+function loadShopeeMallList() {
+    const shopeeMallList = document.querySelector(".shopeemall-items");
+    fetch("assets/data/shopi-maill.json").then(r => r.json()).then((v) => {
+        v.forEach((item, index) => {
+            shopeeMallList.innerHTML += renderShopeeMallItem(item)
+        })
+    })
+        .catch((e) => {
+            alert("Lỗi tải dịch vụ")
+        })
 }
 
 async function flashsaleProductList() {
@@ -143,13 +164,43 @@ function runCooldownFlashsale() {
     }, 1000);
 }
 
+function initEvents() {
+    let shopeeMallListPos = 0;
+
+    const shopeeMallLeftBtn = document.querySelector
+        ("#shopeemall-left-button")
+    const shopeeMallRightBtn = document.querySelector
+        ("#shopeemall-right-button")
+    const shopeeMallList = document.querySelector
+        (".shopeemall-items")
+    const shopeemallBox = document.querySelector
+        (".shopeemall-box")
+
+    shopeeMallRightBtn.addEventListener("click", () => {
+        if (shopeeMallListPos - shopeemallBox.clientWidth > -shopeeMallList.scrollWidth) {
+            shopeeMallListPos -= shopeemallBox.clientWidth
+        }
+        console.log(shopeeMallListPos)
+        shopeeMallList.style.left = `translateX(${shopeeMallListPos}px)`
+    })
+
+    shopeeMallLeftBtn.addEventListener("click", () => {
+        if (shopeeMallListPos > 0) {
+            shopeeMallListPos += shopeemallBox.clientWidth
+        }
+        shopeeMallList.style.left = `translateX(${shopeeMallListPos}px)`
+    })
+}
+
 function main() {
 
     try {
         loadServiceList()
         loadCategoriesList()
+        loadShopeeMallList()
         flashsaleProductList()
         runCooldownFlashsale()
+        initEvents()
     } catch (e) {
 
     }
