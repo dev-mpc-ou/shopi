@@ -1,140 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
-        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/color.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/search.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/assets/css/color.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/search.css" />
+  </head>
 
-<body>
-    <header id="header" class="header-container">
-
-    </header>
+  <body>
+    <header id="header" class="header-container"></header>
 
     <main>
-        <div id="search-filter">
-            <div class="filter-header">
-                <h3>
-                    <i class="bi bi-funnel-fill"></i>
-                    Search Filter
-                </h3>
-            </div>
-            <div class="filter-box">
-                <div class="filter-title">Shipped from</div>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="filter-ho-chi-minh" name="filter-ho-chi-minh">
-                        <label for="filter-ho-chi-minh">Ho Chi Minh</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-hanoi" name="filter-hanoi">
-                        <label for="filter-hanoi">Hanoi</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-da-nang" name="filter-da-nang">
-                        <label for="filter-da-nang">Da Nang</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-can-tho" name="filter-can-tho">
-                        <label for="filter-can-tho">Can Tho</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-nha-trang" name="filter-nha-trang">
-                        <label for="filter-nha-trang">Nha Trang</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-hai-phong" name="filter-hai-phong">
-                        <label for="filter-hai-phong">Hai Phong</label>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="filter-box">
-                <div class="filter-title">By category</div>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="filter-electronics" name="filter-electronics">
-                        <label for="filter-electronics">Electronics</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-clothing" name="filter-clothing">
-                        <label for="filter-clothing">Clothing</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-toy" name="filter-toy">
-                        <label for="filter-toy">Toys</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="filter-pet" name="filter-pet">
-                        <label for="filter-pet">Pet Supplies</label>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="filter-box">
-                <div class="filter-title">Price Range</div>
-                <div class="price-form">
-                    <input type="number" id="min-price" placeholder="Min" class="input-number">
-                    <span>-</span>
-                    <input type="number" id="max-price" placeholder="Max" class="input-number">
-                </div>
-                <div class="price-confirm">
-                    <button class="btn">Apply Filters</button>
-                </div>
-            </div>
-
-            <div class="filter-box">
-                <div class="filter-title">Rating</div>
-                <ul class="rating-list">
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                    </li>
-                </ul>
-            </div>
-            <div class="filter-box">
-                <button class="btn" id="clear-filters">Clear All</button>
-            </div>
+      <div id="search-filter">
+        <div class="filter-header">
+          <h3>
+            <i class="bi bi-funnel-fill"></i>
+            Search Filter
+          </h3>
         </div>
+        <div class="filter-box">
+          <div class="filter-title">Shipped from</div>
+          <ul>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-ho-chi-minh"
+                name="filter-ho-chi-minh"
+              />
+              <label for="filter-ho-chi-minh">Ho Chi Minh</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-hanoi" name="filter-hanoi" />
+              <label for="filter-hanoi">Hanoi</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-da-nang"
+                name="filter-da-nang"
+              />
+              <label for="filter-da-nang">Da Nang</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-can-tho"
+                name="filter-can-tho"
+              />
+              <label for="filter-can-tho">Can Tho</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-nha-trang"
+                name="filter-nha-trang"
+              />
+              <label for="filter-nha-trang">Nha Trang</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-hai-phong"
+                name="filter-hai-phong"
+              />
+              <label for="filter-hai-phong">Hai Phong</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-title">By category</div>
+          <ul>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-electronics"
+                name="filter-electronics"
+              />
+              <label for="filter-electronics">Electronics</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="filter-clothing"
+                name="filter-clothing"
+              />
+              <label for="filter-clothing">Clothing</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-toy" name="filter-toy" />
+              <label for="filter-toy">Toys</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-pet" name="filter-pet" />
+              <label for="filter-pet">Pet Supplies</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-title">Price Range</div>
+          <div class="price-form">
+            <input
+              type="number"
+              id="min-price"
+              placeholder="Min"
+              class="input-number"
+            />
+            <span>-</span>
+            <input
+              type="number"
+              id="max-price"
+              placeholder="Max"
+              class="input-number"
+            />
+          </div>
+          <div class="price-confirm">
+            <button class="btn">Apply Filters</button>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-title">Rating</div>
+          <ul class="rating-list">
+            <li>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </li>
+            <li>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </li>
+            <li>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </li>
+            <li>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </li>
+            <li>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-box">
+          <button class="btn" id="clear-filters">Clear All</button>
+        </div>
+      </div>
+      <div id="search-results">
+        <div class="search-results-header">
+          <div class="search-results-title">
+            Search results for "<span id="search-query"></span>"
+          </div>
+
+          <div class="filter-bar">
+            <div class="filter-left">
+              <span class="filter-label">Sắp xếp thep</span>
+              <button>Liên Quan</button>
+              <button>Mới Nhất</button>
+              <button>Bán Chạy</button>
+              <select class="price">
+                <option value="low-to-high">Gía: Thấp đến Cao</option>
+                <option value="high-to-low">Gía: Cao đến thấp</option>
+              </select>
+            </div>
+            <div class="filter-right">
+              <span class="pagination-info"
+                ><span class="current-page">1</span>17</span
+              >
+              <div class="pagination-btn">
+                <button class="btn-page">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="btn-page">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-results-content">
+          <div class="search-result-item">
+            <div class="search-result-item-image">
+              <img
+                src="https://down-vn.img.susercontent.com/file/vn-11134207-81ztc-mov1tmtbgqa454@resize_w640_nl.webp"
+                alt=""
+              />
         <div id="search-results">
             <div class="search-results-header">
                 <div class="search-results-title">
@@ -161,55 +238,44 @@
                     </div>
                 </div>
             </div>
-            <div class="search-results-content">
-                <div class="search-result-item">
-                    <div class="search-result-item-image">
-                        <img src="https://down-vn.img.susercontent.com/file/vn-11134207-81ztc-mov1tmtbgqa454@resize_w640_nl.webp"
-                            alt="">
-                    </div>
-                    <div class="search-result-item-info">
-                        <div class="search-result-item-title">
-                            <span>Yêu thích</span>
-                            Product Name ABC sjfgvs jysfdyh sg sdfysdyui 
-                        </div>
-                        <div class="search-result-item-price">
-                            <span class="discounted-price">100.000đ</span>
-                            <span class="listed-price">180.000đ</span>
-                            <span class="discount-percentage">
-                                -44%
-                            </span>
-                        </div>
-                        <div class="search-result-item-promotional-tag">
-                            <span>Cheap on Shopee</span>
-                            <span>Cheap on Shopee</span>
-                        </div>
-                        <div class="search-result-item-traffic">
-                            <span class="rate">
-                                4.5
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                            <span class="sold">Đã bán 1000+</span>
-                        </div>
-                        <div class="search-result-item-shipping">
-                            <span class="shipping-time">Trong 24h</span>
-                            <span class="shipping-from">
-                                Ho Chi Minh City    
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="search-result-item-info">
+              <div class="search-result-item-title">
+                <span>Yêu thích</span>
+                Product Name ABC sjfgvs jysfdyh sg sdfysdyui
+              </div>
+              <div class="search-result-item-price">
+                <span class="discounted-price">100.000đ</span>
+                <span class="listed-price">180.000đ</span>
+                <span class="discount-percentage"> -44% </span>
+              </div>
+              <div class="search-result-item-promotional-tag">
+                <span>Cheap on Shopee</span>
+                <span>Cheap on Shopee</span>
+              </div>
+              <div class="search-result-item-traffic">
+                <span class="rate">
+                  4.5
+                  <i class="bi bi-star-fill"></i>
+                </span>
+                <span class="sold">Đã bán 1000+</span>
+              </div>
+              <div class="search-result-item-shipping">
+                <span class="shipping-time">
+                  <i class="bi bi-truck">Trong 24h</i></span
+                >
+                <span class="shipping-from">
+                  <i class="bi bi-geo-alt">Ho Chi Minh City</i></span
+                >
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </main>
 
-    <footer id="footer">
-
-    </footer>
+    <footer id="footer"></footer>
     <script src="/assets/js/initDOM.js"></script>
     <script src="/assets/js/app.js"></script>
     <script src="/assets/js/search.js"></script>
-</body>
-
+  </body>
 </html>
