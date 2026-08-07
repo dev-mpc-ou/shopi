@@ -177,3 +177,92 @@ main {
     -webkit-line-clamp: 1;
     word-break: break-all;
 }
+
+/* ==================== FILTER BAR ==================== */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ededed;
+  padding: 12px 20px;
+  border-radius: 2px;
+}
+
+
+.filter-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #555;
+  margin-right: 5px;
+}
+
+.filter-left button {
+  background-color: #fff;
+  border: none;
+  padding: 8px 25px;
+  font-size: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-left button:hover {
+  background-color: #ee4d2d;
+  color: #fff;
+}
+
+.filter-left select.price {
+  background-color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination-info {
+  font-size: 14px;
+}
+
+.pagination-info .current-page {
+  color: #ee4d2d;
+  font-weight: bold;
+}
+
+.pagination-btn {
+  display: flex;
+}
+
+.pagination-btn .btn-page {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  width: 36px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pagination-btn .btn-page:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.pagination-btn .btn-page:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-left: none;
+}
